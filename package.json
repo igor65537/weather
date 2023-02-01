@@ -7,7 +7,9 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "prettier --write . && eslint . --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "webpack serve",
+    "build": "webpack --env production"
   },
   "repository": {
     "type": "git",
@@ -27,16 +29,26 @@
     "@babel/preset-env": "^7.20.2",
     "@types/jest": "^29.4.0",
     "babel-jest": "^29.4.1",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
     "eslint": "^8.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jest": "^27.2.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3"
+    "mini-css-extract-plugin": "^2.7.2",
+    "prettier": "^2.8.3",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
   "lint-staged": {
     "*.js": "eslint --fix",
